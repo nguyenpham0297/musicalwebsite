@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { getProducts } from "../lib/getProducts";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,8 +11,18 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 
-export default async function Home() {
-  const pickups = await getProducts();
+export default function Home() {
+  const [pickups, setPickups] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function loadProducts() {
+      const data = await getProducts();
+      console.log("PICKUPS =", data);
+      setPickups(data);
+    }
+
+    loadProducts();
+  }, []);
 
   return (
     <main className="home">
@@ -130,13 +143,6 @@ export default async function Home() {
 
             <div className="info">
               <h2>{item.name}</h2>
-
-              {/*
-                Price intentionally hidden for now.
-                Uncomment below if needed later.
-              */}
-
-              {/* <p>${item.price}</p> */}
             </div>
 
           </Link>

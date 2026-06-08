@@ -3,11 +3,11 @@ import { db } from "../../../lib/firebase";
 import Image from "next/image";
 
 type Props = {
-    params: Promise<{ id: string }>; // 👈 QUAN TRỌNG
+    params: Promise<{ id: string }>;
 };
 
 export default async function ProductPage({ params }: Props) {
-    const { id } = await params; // ✅ FIX
+    const { id } = await params;
 
     if (!id) {
         return <div>Invalid product ID</div>;

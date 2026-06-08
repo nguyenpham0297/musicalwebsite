@@ -46,18 +46,29 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     z-index: 2;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 0 40px;
 }
 
 .hero h1 {
     font-size: 4.5rem;
     font-weight: 900;
     letter-spacing: 3px;
+}
+
+.hero-subtitle {
+    max-width: 560px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 /* ===== CATEGORY BAR ===== */
@@ -104,10 +115,13 @@
     position: relative;
     overflow: hidden;
     background: black;
+    aspect-ratio: 1 / 1;
 }
 
 .image-container img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
