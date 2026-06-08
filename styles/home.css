@@ -1,0 +1,188 @@
+/* ===== GLOBAL ===== */
+.home {
+    background: #e9ded3;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 65vh;
+    background-image: url("/home.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* ===== SOCIALS ===== */
+.socials {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+    justify-content: center;
+    z-index: 3;
+    position: relative;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+}
+
+.socials a:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* TEXT CENTER */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+/* ===== CATEGORY BAR ===== */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: #e9ded3;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.categories span {
+    cursor: pointer;
+    color: #333;
+}
+
+.categories span:hover {
+    text-decoration: underline;
+}
+
+/* ===== PRODUCT GRID ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 60px;
+}
+
+/* ===== CARD ===== */
+.card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== IMAGE ===== */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    background: black;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* MAIN IMAGE */
+.main-img {
+    opacity: 1;
+}
+
+/* HOVER IMAGE */
+.hover-img {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+/* HOVER EFFECT */
+.card:hover .main-img {
+    opacity: 0;
+}
+
+.card:hover .hover-img {
+    opacity: 1;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== INFO ===== */
+.info {
+    margin-top: 15px;
+}
+
+.info h2 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    color: #e07a5f;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

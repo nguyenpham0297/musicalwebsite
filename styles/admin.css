@@ -1,0 +1,212 @@
+/* ===== ADMIN PAGE ===== */
+.admin {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.admin h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* ===== FORM CONTAINER ===== */
+.admin-form,
+.product-list {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.admin-form h2,
+.product-list h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.admin-form input,
+.admin-form textarea,
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    display: block;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.admin-form textarea,
+.edit-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ===== LABEL ===== */
+.admin-form label,
+.edit-form label {
+    display: block;
+    margin: 12px 0 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ===== FILE INPUT ===== */
+.admin-form input[type="file"],
+.edit-form input[type="file"] {
+    padding: 14px;
+    background: #fafafa;
+}
+
+/* ===== PREVIEW IMAGE ===== */
+.preview {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 10px 0 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ===== BUTTONS ===== */
+.admin-form button,
+.edit-form button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.admin-form button:hover,
+.edit-form button:hover {
+    opacity: 0.85;
+}
+
+/* ===== PRODUCT ITEM ===== */
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.product-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-images {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.product-info-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-info-admin strong {
+    font-size: 1.1rem;
+}
+
+.product-info-admin span {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.product-info-admin p {
+    max-width: 500px;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.product-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.edit-btn {
+    background: white;
+    border: 1px solid #111;
+    color: #111;
+}
+
+.delete-btn {
+    background: #ef3340;
+    border: 1px solid #ef3340;
+    color: white;
+}
+
+/* ===== EDIT FORM ===== */
+.edit-form {
+    width: 100%;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-actions button {
+    width: auto;
+    flex: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .admin {
+        padding: 20px;
+    }
+
+    .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-actions {
+        width: 100%;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        flex: 1;
+    }
+}

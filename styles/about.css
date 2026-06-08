@@ -1,0 +1,150 @@
+.about-page {
+    min-height: 100vh;
+    background: #e9ded3;
+    padding: 40px 60px;
+}
+
+/* ================= HEADER ================= */
+
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.about-logo {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.about-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.about-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    position: relative;
+}
+
+.about-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: black;
+    transition: 0.3s;
+}
+
+.about-nav a:hover::after,
+.about-nav .active::after {
+    width: 100%;
+}
+
+/* ================= CONTENT ================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* ================= LEFT ================= */
+
+.about-text h1 {
+    font-size: 5rem;
+    line-height: 0.95;
+    margin-bottom: 40px;
+    color: #10108c;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.signature {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signature span {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* ================= RIGHT ================= */
+
+.about-image {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+}
+
+.studio-img {
+    object-fit: cover;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 500px;
+    }
+
+    .about-text h1 {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .about-page {
+        padding: 30px 25px;
+    }
+
+    .about-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .about-nav {
+        gap: 25px;
+    }
+
+    .about-text h1 {
+        font-size: 2.7rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+}
